@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<title>Wireframe</title>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="block block--top"></div>
+
+  <div class="block block--1">
+    <p class="location-label">Location-</p>
+    <div class="button-row">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="pill"></span>
+    </div>
+  </div>
+
+  <!-- sticky functional bar sits between block 1 and block 2, floats on scroll -->
+  <div class="func-bar">
+    <button class="func-btn" aria-label="功能按鈕 1"></button>
+    <button class="func-btn" aria-label="功能按鈕 2"></button>
+  </div>
+
+  <div class="block block--2"></div>
+  <div class="block block--3"></div>
+  <div class="block block--4"></div>
+  <div class="block--5-wrap">
+    <button class="carousel-nav carousel-nav--prev" id="carouselPrev" aria-label="向左切換">&#10094;</button>
+    <div class="block block--5" id="carouselTrack">
+      <div class="block--5-item">
+        <div class="top"></div>
+        <div class="bottom"></div>
+      </div>
+      <div class="block--5-item">
+        <div class="top"></div>
+        <div class="bottom"></div>
+      </div>
+      <div class="block--5-item">
+        <div class="top"></div>
+        <div class="bottom"></div>
+      </div>
+    </div>
+    <button class="carousel-nav carousel-nav--next" id="carouselNext" aria-label="向右切換">&#10095;</button>
+  </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>

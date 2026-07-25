@@ -1,0 +1,174 @@
+*{ box-sizing:border-box; margin:0; padding:0; }
+
+  body{
+    background:#f2f2f2;
+    display:flex;
+    justify-content:center;
+    padding:40px 16px;
+    font-family:-apple-system, "Segoe UI", "PingFang TC", sans-serif;
+  }
+
+  .page{
+    position:relative;
+    width:410px;
+    max-width:100%;
+    background:#fff;
+  }
+
+  .block{
+    position:relative;
+    background:#dcdcdc;
+    border-top:2px solid #fff;
+  }
+
+  .block:first-child{ border-top:none; }
+
+  .block--top{
+    height:84px;
+    background:#fff;
+  }
+
+  .block--1{ 
+    width:100%;
+    height:300px;              /* 示範用高度，實務上可能是 min-height 或由外層決定 */
+    background:#d9d9d9;
+ 
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;  /* 取代 padding-top:190px，把內容推到底部 */
+    align-items:flex-start;    /* 內容靠左 */
+ 
+    padding:0 219px 22px 16px; 
+  }
+  .block--2{ height:143px; margin-top:13px; }
+  .block--3{ height:105px; }
+  .block--4{ height:135px; }
+  .block--5-wrap{
+    position:relative;
+    margin-top:15px;
+    margin-bottom:15px;
+  }
+
+  .block--5{
+    height:220px;
+    margin-top:0;
+    background:transparent;
+    display:flex;
+    align-items:stretch;
+    gap:14px;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    padding:0 14px;
+    -webkit-overflow-scrolling:touch;
+  }
+  .block--5::-webkit-scrollbar{ display:none; }
+  .block--5{ scrollbar-width:none; }
+
+  .block--5-item{
+    flex:0 0 auto;
+    width:100%;
+    background:#dcdcdc;
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+  }
+
+  .block--5-item .top{
+    flex:2;
+    background:#8a8a8a;
+    border-radius:1px;
+  }
+
+ .block--5-item .bottom{
+    flex:1;
+    background:#8a8a8a;
+    border-radius:1px;
+  }
+
+  .carousel-nav{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:#ffffff;
+    border:none;
+    cursor:pointer;
+    box-shadow:0 2px 6px rgba(0,0,0,.2);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:16px;
+    color:#333;
+    z-index:5;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .carousel-nav:hover{
+    transform:translateY(-50%) scale(1.15);
+    box-shadow:0 4px 12px rgba(0,0,0,.3);
+  }
+  .carousel-nav--prev{ left:6px; }
+  .carousel-nav--next{ right:6px; }
+
+  /* location label + dots row inside block 1 */
+  .button-row{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 5px;
+  }
+  .location-label{
+    position:absolute;
+    left:22px;
+    bottom:66px;
+    font-size:14px;
+    color:#333;
+  }
+  .dot{
+    width:31px;
+    height:31px;
+    border-radius:50%;
+    background:#8a8a8a;
+    flex-shrink:0;
+  }
+  .pill{
+    width:73px;
+    height:31px;
+    border-radius:999px;
+    background:#8a8a8a;
+    flex-shrink:0;
+  }
+
+  /* ---- sticky functional bar ---- */
+  .func-bar{
+    position:fixed;
+    top:200px;
+    right:calc(50% - 205px + 16px);
+    width:50px;
+    height:198px;
+    background:#8a8a8a;
+    border-radius:25px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    z-index:10;
+  }
+
+  .func-btn{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:#ffffff;
+    border:none;
+    cursor:pointer;
+    box-shadow:0 2px 6px rgba(0,0,0,.15);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+
+  .func-btn:hover{
+    transform:scale(1.2);
+    box-shadow:0 4px 12px rgba(0,0,0,.25);
+  }
