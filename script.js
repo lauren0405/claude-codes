@@ -16,3 +16,13 @@ const track = document.getElementById('carouselTrack');
   nextBtn.addEventListener('click', () => {
     track.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
   });
+
+  const bookingBtn = document.getElementById("booking");
+
+bookingBtn.addEventListener("click", () => {
+  Calendly.initPopupWidget({
+    url: "https://calendly.com/herman121307296"
+  });
+
+  return false;
+});

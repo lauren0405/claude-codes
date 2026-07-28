@@ -145,7 +145,7 @@
     position:fixed;
     top:200px;
     right:calc(50% - 205px + 16px);
-    width:50px;
+    width:60px;
     height:198px;
     background:#8a8a8a;
     border-radius:25px;
@@ -158,8 +158,8 @@
   }
 
   .func-btn{
-    width:34px;
-    height:34px;
+    width:45px;
+    height:45px;
     border-radius:50%;
     background:#ffffff;
     border:none;
