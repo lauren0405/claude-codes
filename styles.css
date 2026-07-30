@@ -4,13 +4,12 @@
     background:#f2f2f2;
     display:flex;
     justify-content:center;
-    padding:40px 16px;
     font-family:-apple-system, "Segoe UI", "PingFang TC", sans-serif;
   }
 
   .page{
     position:relative;
-    width:410px;
+    width:100%;
     max-width:100%;
     background:#fff;
   }
@@ -143,23 +142,30 @@
   /* ---- sticky functional bar ---- */
   .func-bar{
     position:fixed;
-    top:200px;
-    right:calc(50% - 205px + 16px);
-    width:60px;
-    height:198px;
+    top:40%;
+    right:24px;
+    width:90px;
+    height:300px;
     background:#8a8a8a;
-    border-radius:25px;
+    border-radius:999px;
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    gap:18px;
+    gap:20px;
     z-index:10;
   }
 
+  @media (max-width: 768px) {
+  .function-bar {
+    right: 8px; /* 手機版：縮小右邊距，留出更多空間給主內容 */
+    transform: translateY(-50%) scale(0.85); /* 整體等比例縮小 15% */
+  }
+  }
+
   .func-btn{
-    width:45px;
-    height:45px;
+    width:70px;
+    height:70px;
     border-radius:50%;
     background:#ffffff;
     border:none;
