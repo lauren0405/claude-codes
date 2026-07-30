@@ -159,7 +159,7 @@
   @media (max-width: 768px) {
   .function-bar {
     right: 8px; /* 手機版：縮小右邊距，留出更多空間給主內容 */
-    transform: translateY(-50%) scale(0.85); /* 整體等比例縮小 15% */
+    transform: translateY(-50%) scale(0.65); /* 整體等比例縮小 35% */
   }
   }
 
