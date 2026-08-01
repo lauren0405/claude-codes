@@ -26,3 +26,21 @@ bookingBtn.addEventListener("click", () => {
 
   return false;
 });
+
+const hero = document.querySelector(".hero");
+const funcBar = document.querySelector(".func-bar");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    if (entries[0].isIntersecting) {
+      funcBar.classList.remove("show");
+    } else {
+      funcBar.classList.add("show");
+    }
+  },
+  {
+    threshold: 0.1,
+  }
+);
+
+observer.observe(hero);
