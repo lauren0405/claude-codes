@@ -18,20 +18,20 @@
     position:relative;
     background:#dcdcdc;
     border-top:2px solid #fff;
+    margin:0 24px;
   }
 
   .block:first-child{ border-top:none; }
 
   .block--top{
-    height:84px;
+    height:48px;
     background:#fff;
   }
 
   .block--1{ 
     width:100%;
-    height:300px;              /* 示範用高度，實務上可能是 min-height 或由外層決定 */
+    height:1075px;              /* 示範用高度，實務上可能是 min-height 或由外層決定 */
     background:#d9d9d9;
- 
     display:flex;
     flex-direction:column;
     justify-content:flex-end;  /* 取代 padding-top:190px，把內容推到底部 */
@@ -39,9 +39,9 @@
  
     padding:0 219px 22px 16px; 
   }
-  .block--2{ height:143px; margin-top:13px; }
-  .block--3{ height:105px; }
-  .block--4{ height:135px; }
+  .block--2{ width:100%; height:430px; margin-top:13px; }
+  .block--3{ width:100%; height:430px; }
+  .block--4{ width:100%; height:430px; }
   .block--5-wrap{
     position:relative;
     margin-top:15px;
@@ -49,7 +49,7 @@
   }
 
   .block--5{
-    height:220px;
+    height:770px;
     margin-top:0;
     background:transparent;
     display:flex;
