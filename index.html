@@ -11,6 +11,9 @@
   src="https://assets.calendly.com/assets/external/widget.js"
   async></script>
 <title>Wireframe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css">
 </head>
 <body>
 
@@ -52,12 +55,81 @@
     <button class="carousel-nav carousel-nav--next" id="carouselNext" aria-label="向右切換">&#10095;</button>
   </div>
   <div class="func-bar">
-    <button id="booking" class="func-btn" aria-label="功能按鈕 1">立即<br/>預約</button>
+    <button id="booking" class="func-btn trigger-btn" aria-label="功能按鈕 1" data-booking-open>立即<br/>預約</button>
     <button class="func-btn" aria-label="功能按鈕 2"></button>
   </div>
   </div>
 </div>
 </div>
+<!-- ========== 預約彈出視窗（可整段搬到你的網頁） ========== -->
+<div class="booking-overlay" id="bookingOverlay">
+  <div class="booking-modal" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+    <button class="modal-close" id="bookingClose" aria-label="關閉預約視窗">✕</button>
+ 
+    <div class="ticket" id="ticketView">
+      <div class="ticket-top">
+        <span class="eyebrow">APPOINTMENT PASS</span>
+        <h2 id="bookingTitle">預約您的時段</h2>
+ 
+        <p class="section-label">選擇日期</p>
+        <div id="flatpickrCalendar"></div>
+ 
+        <div class="time-section">
+          <p class="section-label">選擇時段</p>
+          <div id="timeSlots" class="time-slots">
+            <div class="time-empty">請先選擇日期</div>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="perforation">
+        <span class="notch"></span>
+        <span class="dash-line"></span>
+        <span class="notch"></span>
+      </div>
+ 
+      <div class="ticket-bottom">
+        <p class="section-label">聯絡資訊</p>
+        <form id="bookingForm" novalidate>
+          <div class="field">
+            <label for="nameInput">姓名</label>
+            <input type="text" id="nameInput" name="name" placeholder="王小明" autocomplete="name">
+            <span class="error-msg" id="nameError"></span>
+          </div>
+          <div class="field">
+            <label for="phoneInput">電話</label>
+            <input type="tel" id="phoneInput" name="phone" placeholder="0912-345-678" autocomplete="tel">
+            <span class="error-msg" id="phoneError"></span>
+          </div>
+ 
+          <div class="summary-strip">
+            <span id="summaryDate">— 尚未選擇日期 —</span>
+            <span id="summaryTime">—</span>
+          </div>
+ 
+          <button type="submit" class="submit-btn" id="submitBtn">確認預約</button>
+        </form>
+      </div>
+    </div>
+ 
+    <div class="success-state" id="successState" hidden>
+      <div class="stamp">✓</div>
+      <h3>預約成功</h3>
+      <p>我們已收到您的預約資訊，稍後將以簡訊或電話與您確認。</p>
+      <div class="success-code">
+        <div>編號　<b id="resCode"></b></div>
+        <div>日期　<b id="resDate"></b></div>
+        <div>時段　<b id="resTime"></b></div>
+        <div>姓名　<b id="resName"></b></div>
+        <div>電話　<b id="resPhone"></b></div>
+      </div>
+      <button class="success-close" id="successClose">關閉</button>
+    </div>
+  </div>
+</div>
+<!-- ========== 預約彈出視窗結束 ========== -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/l10n/zh.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
