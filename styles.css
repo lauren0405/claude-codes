@@ -74,7 +74,6 @@
     overflow-x:auto;
     scroll-behavior:smooth;
     scroll-snap-type: x mandatory;
-    scroll-padding-left: 14px;
     padding:0 12px;
     -webkit-overflow-scrolling:touch;
   }
@@ -191,11 +190,18 @@
     right: 8px; /* 手機版：縮小右邊距，留出更多空間給主內容 */
     transform: translateY(-50%) scale(0.70); /* 整體等比例縮小 30% */
   }
+  .block{
+    margin:0 6px;
+  }
   .block--1{
-    aspect-ratio:400/300;
+    aspect-ratio:400/350;
+    padding:0 6px 10px 6px; 
   }
   .block--2,.block--3,.block--4{
-    aspect-ratio:400/150;
+    aspect-ratio:400/180;
+  }
+  .block--5{
+    padding:0 6px;
   }
   }
 
