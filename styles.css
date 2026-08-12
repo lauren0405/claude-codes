@@ -194,14 +194,15 @@
     margin:0 6px;
   }
   .block--1{
-    aspect-ratio:400/350;
-    padding:0 6px 10px 6px; 
+    aspect-ratio:400/300;
+    padding:0; 
   }
   .block--2,.block--3,.block--4{
-    aspect-ratio:400/180;
+    aspect-ratio:400/200;
   }
   .block--5{
     padding:0 6px;
+    aspect-ratio:120/200;
   }
   }
 
