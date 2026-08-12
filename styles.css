@@ -236,7 +236,7 @@
   .booking-modal{
     position:relative;
     width:100%;
-    max-width:420px;
+    max-width:540px;
     max-height:90vh;
     overflow-y:auto;
     transform:translateY(16px) scale(.97);
@@ -293,7 +293,19 @@
   .flatpickr-calendar{
     box-shadow:none !important;
     width:100% !important;
+    max-width:100% !important;
     background:transparent !important;
+  }
+  .flatpickr-innerContainer,
+  .flatpickr-rContainer,
+  .flatpickr-days,
+  .dayContainer{
+  width:100% !important;
+  max-width:100% !important;
+  }
+  .flatpickr-day{
+  max-width:none !important;
+  flex:1 1 14.2857%; /* 100% ÷ 7 天,讓每個日期格子等比例縮放 */
   }
   .flatpickr-calendar.inline{ border:1px solid var(--line); border-radius:12px; padding:8px; background:#fff; }
   .flatpickr-months .flatpickr-month{ color:var(--ink); fill:var(--ink); }
