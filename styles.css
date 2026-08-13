@@ -125,29 +125,33 @@
   .carousel-nav--next{ right:6px; }
 
   /* location label + dots row inside block 1 */
+  .info-stack{
+    position:absolute;
+    left:30px;
+    bottom:30px;
+    display:flex;
+    flex-direction:column;   /* 垂直排列 */
+    gap:8px;                 /* 兩者間距，取代原本各自的 margin */
+   }
   .button-row{
     display:flex;
     align-items:center;
-    gap:10px;
-    padding:10px 5px;
+    gap:15px;
   }
   .location-label{
-    position:absolute;
-    left:22px;
-    bottom:66px;
-    font-size:14px;
+    font-size:24px;
     color:#333;
   }
   .dot{
-    width:31px;
-    height:31px;
+    width:60px;
+    height:60px;
     border-radius:50%;
     background:#8a8a8a;
     flex-shrink:0;
   }
   .pill{
-    width:73px;
-    height:31px;
+    width:120px;
+    height:60px;
     border-radius:999px;
     background:#8a8a8a;
     flex-shrink:0;
@@ -186,6 +190,9 @@
   .func-bar {
     right: 8px; /* 手機版：縮小右邊距，留出更多空間給主內容 */
     transform: translateY(-50%) scale(0.70); /* 整體等比例縮小 30% */
+  }
+  .button-row,.location-label{
+    transform: translateY(-50%) scale(0.70);
   }
   .block{
     margin:0 6px;
