@@ -43,7 +43,6 @@
   }
 
   .block--1{ 
-    width:100%;
     aspect-ratio: 375/200;              /* 示範用高度，實務上可能是 min-height 或由外層決定 */
     background:#d9d9d9;
     display:flex;
@@ -53,9 +52,9 @@
  
     padding:0 16px 22px 16px; 
   }
-  .block--2{ width:100%; aspect-ratio: 375/150; margin-top:13px; }
-  .block--3{ width:100%; aspect-ratio: 375/150; }
-  .block--4{ width:100%; aspect-ratio: 375/150; }
+  .block--2{  aspect-ratio: 375/150; margin-top:13px; }
+  .block--3{  aspect-ratio: 375/150; }
+  .block--4{  aspect-ratio: 375/150; }
   .block--5-wrap{
     position:relative;
     margin-top:15px;
@@ -64,7 +63,6 @@
   }
 
   .block--5{
-    width:100%;
     aspect-ratio: 375/200;
     margin-top:0;
     background:transparent;
@@ -74,7 +72,6 @@
     overflow-x:auto;
     scroll-behavior:smooth;
     scroll-snap-type: x mandatory;
-    padding:0 12px;
     -webkit-overflow-scrolling:touch;
   }
   .block--5::-webkit-scrollbar{ display:none; }
